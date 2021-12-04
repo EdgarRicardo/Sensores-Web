@@ -14,7 +14,7 @@ $( document ).ready(function() {
         });
         console.log(dataSensores);
     }
-    var dataInterval = setInterval(getDataSensores,1000);
+    var dataInterval = setInterval(getDataSensores,100);
     $("#dReal").attr('class', 'btn btn-success');
 
     function cleanVars(){
@@ -77,7 +77,7 @@ $( document ).ready(function() {
                 rendered: function(evt, arg) {
                     evt.sender.dataUpdate = setInterval(function() {
                         evt.sender.feedData("&value=" + dataSensores.temperatura);
-                    }, 1000);
+                    }, 100);
                 },
                 realtimeUpdateComplete: function(evt, arg) {
                     var annotations = evt.sender.annotations,
@@ -149,7 +149,7 @@ $( document ).ready(function() {
                 rendered: function(evtObj, argObj) {
                     evtObj.sender.chartInterval = setInterval(function() {
                         evtObj.sender.feedData && evtObj.sender.feedData("&value=" + dataSensores.distancia);
-                    }, 800);
+                    }, 1);
                 },
                 realTimeUpdateComplete: function(evt, arg) {
                     var annotations = evt.sender.annotations,
@@ -248,7 +248,7 @@ $( document ).ready(function() {
                 rendered: function(evtObj, argObj) {
                     evtObj.sender.intervalVar = setInterval(function() {
                         evtObj.sender.feedData && evtObj.sender.feedData("&value=" + dataSensores.luz);
-                    }, 800);
+                    }, 50);
                 },
             realTimeUpdateComplete: function(evt, arg) {
                     var annotations = evt.sender.annotations,
@@ -256,7 +256,7 @@ $( document ).ready(function() {
                     if(dataVal>10)
                         $("#foco").attr("src","/static/b_prendida.png");
                     else
-                        $("#foco").attr("src","b_apagada.png");
+                        $("#foco").attr("src","/static/b_apagada.png");
                     annotations && annotations.update('dataLuz', {
                         "text": dataVal + " luxes"
                     });
@@ -281,7 +281,7 @@ $( document ).ready(function() {
             dataVal = sDistancia.getData()
             llenado = dataVal+10<200 ? dataVal + 10 : 200
             sDistancia.feedData("&value=" + llenado);
-        }, 100);
+        }, 50);
     });
     $("#vaciado" ).click(function() {
         colorsButtonsReset()
@@ -291,7 +291,7 @@ $( document ).ready(function() {
             dataVal = sDistancia.getData()
             vaciado = dataVal-10>3 ? dataVal - 10 : 3
             sDistancia.feedData("&value=" + vaciado);
-        }, 100);
+        }, 50);
     });
     $("#dReal" ).click(function() {
         colorsButtonsReset()
@@ -299,7 +299,7 @@ $( document ).ready(function() {
         clearInterval(sDistancia.chartInterval);
         sDistancia.chartInterval = setInterval(function() {
             sDistancia.feedData("&value=" + dataSensores.distancia);
-        }, 800);
+        }, 50);
     });
         
 });

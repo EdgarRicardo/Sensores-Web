@@ -1,23 +1,22 @@
-import serial
 import sys
+import serial
 import json
 import threading
 from flask import Flask, jsonify, request, render_template
 
+
 app = Flask(__name__)
-
-@app.route('/')
-def output():
-	# serve index template
-	return render_template('Sensores.html')
-
-@app.route('/getData',methods=["GET"])
-def dataPort():
-    data = getData()
-    return data
+data = {
+    "mensaje":"Valores por default",
+    "distancia":100,
+    "temperatura":0,
+    "luz":0
+}
 
 def getData():
+    global data
     serialPort = serial.Serial('COM3',9600)
+    print("Puerto Serial Abierto")
     while True:
         try:
             d = serialPort.readline().decode('UTF-8')
@@ -25,10 +24,21 @@ def getData():
             data["distancia"] = round(float(data["distancia"]))
             data["temperatura"] = round(float(data["temperatura"]))
             data["luz"] = round(float(data["luz"]))
-            return jsonify(data)
         except Exception as e:
-            print("Error"+ str(e))
+            print("Error Sin Info")
     serialPort.close()
 
+@app.route('/')
+def output():
+	return render_template('Sensores.html')
+
+@app.route('/getData',methods=["GET"])
+def dataPort():
+    return jsonify(data)
+
 if __name__ == '__main__':
-    app.run(debug=True, port=4000)
+    t = threading.Thread(target=getData)
+    t.start()
+    app.run(debug=True, port=4000,use_reloader=False)
+    sys.exit()
+    

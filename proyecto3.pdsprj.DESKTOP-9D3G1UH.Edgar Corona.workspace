@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffffb00000001a000000da06000010040000</PLACEMENT>
+  <PLACEMENT>2c00000000000000010000000083ffff0083ffffffffffffffffffffb00000001a000000da06000010040000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="400" x="5" flags="00000002" y="83" h="100" pid="0" iid="-1">
+   <POPUP w="400" x="1199" flags="00000002" y="206" h="100" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">142</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
@@ -32,7 +32,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="872" x="107" flags="00008023" y="686" h="250" pid="0" iid="6">
+   <POPUP w="872" x="1048" flags="00000023" y="736" h="250" pid="0" iid="6">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>
