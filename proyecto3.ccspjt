@@ -1,0 +1,67 @@
+[PROJECT]
+Target=proyecto3.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.076
+Compiler=PCM
+[Target Data]
+FileList=proyecto3.c
+[proyecto3.c]
+Type=4
+[mru-list]
+1=proyecto3.c
+
+[defines]
+buildcount=25
+
+[ProjectLog]
+Days=3
+D1=18-11-2021
+D1_L=10
+D1_L1=[51065]Stopped Editing.
+TotalEdit=38
+TotalDebug=0
+D1_E=26
+D1_D=0
+D1_L2=[51126]Started Editing.
+D1_L3=[51516]Stopped Editing.
+D1_L4=[56918]Started Editing.
+D1_L5=[58244]Stopped Editing.
+D1_L6=[58682]Started Editing.
+D1_L7=[59255]Stopped Editing.
+D1_L8=[59306]Started Editing.
+D1_L9=[59634]Stopped Editing.
+D1_L10=[60187]Project Closed.
+D2=22-11-2021
+D2_L=6
+D2_L1=[50237]Project Opened.
+D2_L2=[50256]Started Editing.
+D2_L3=[50558]Stopped Editing.
+D2_L4=[50595]Started Editing.
+D2_L5=[51487]Stopped Editing.
+D2_E=10
+D2_D=0
+D2_L6=[55355]Project Closed.
+D3=03-12-2021
+D3_L=9
+D3_L1=[42921]Project Opened.
+D3_L2=[42937]Started Editing.
+D3_L3=[43371]Stopped Editing.
+D3_L4=[48408]Started Editing.
+D3_L5=[48715]Stopped Editing.
+D3_L6=[68369]Project Opened.
+D3_L7=[68383]Started Editing.
+D3_L8=[68796]Stopped Editing.
+D3_E=2
+D3_D=0
+D3_L9=[69722]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=proyecto3.c
+t1=13
+Count=1
+[Units]
+Count=1
+1=proyecto3 (main)

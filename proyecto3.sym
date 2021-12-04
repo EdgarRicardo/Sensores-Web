@@ -1,0 +1,128 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-021 strtok.save
+022-025 distancia
+026-029 tiempo
+02A     Timer2
+02B     Postcaler
+02C     @TRIS_C
+02D-02E @ITOF.P1
+02D     @PSTRINGCN7_9600_62_63.P2
+02D-030 @FLT.P3
+02D-030 @PRINTF_L32D_9600_62_63FPFPF.P4
+02D-030 @DIVFF.P5
+02D     MAIN.@SCRATCH1
+02E     @delay_ms1.P1
+02E     MAIN.@SCRATCH2
+02E     @PSTRINGCN7_9600_62_63.@SCRATCH1
+02F     MAIN.@SCRATCH3
+02F     @PSTRINGCN7_9600_62_63.@SCRATCH2
+030     MAIN.@SCRATCH4
+030     @PSTRINGCN7_9600_62_63.@SCRATCH3
+031     @PRINTF_L32D_9600_62_63FPFPF.P1
+031-034 @FLT.P2
+031-034 @DIVFF.P3
+031     @PSTRINGCN7_9600_62_63.@SCRATCH4
+032     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH1
+033     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH2
+034     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH3
+035     @DIVFF.@SCRATCH1
+035     @FLT.@SCRATCH1
+035     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH4
+036     @DIVFF.@SCRATCH2
+036     @FLT.@SCRATCH2
+036     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH5
+037     @DIVFF.@SCRATCH3
+037     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH6
+038     @DIVFF.@SCRATCH4
+038     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH7
+039     @DIVFF.@SCRATCH5
+039     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH8
+03A-03D @DIV3232.P1
+03A-03D @FTOSD.P2
+03A-03D @MULFF.P3
+03A     @DIVFF.@SCRATCH6
+03E-041 @DIV3232.P1
+03E-041 @MULFF.P2
+03E     @FTOSD.@SCRATCH1
+042     @MULFF.@SCRATCH1
+042     @DIV3232.@SCRATCH1
+043     @MULFF.@SCRATCH2
+043     @DIV3232.@SCRATCH2
+044     @MULFF.@SCRATCH3
+044     @DIV3232.@SCRATCH3
+045     @MULFF.@SCRATCH4
+045     @DIV3232.@SCRATCH4
+046     @MULFF.@SCRATCH5
+046     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const754.call
+00001B  @ITOF
+00003A  @DIVFF
+000106  @MULFF
+00017B  @FLT
+0001BC  @PSTRINGCN7_9600_62_63
+000215  @DIV3232
+000264  @PRINTF_L32D_9600_62_63FPFPF
+00028B  @FTOSD
+000348  @delay_ms1
+00035F  MAIN
+00035F  @cinit1
+000373  @cinit2
+
+Project Directory:
+    F:\ESCOM\Segundo\Intrumentación\Proyecto3\
+
+Project Files:
+    proyecto3.c                                             [03-dic.-21 11:57  CRC=C261699F]
+    E:\PICC\Devices\16f877a.h                               [15-ene.-18 14:53  CRC=63418C39]
+    E:\PICC\Drivers\stdio.h                                 [31-jul.-07 13:24  CRC=4E4534F4]
+    E:\PICC\Drivers\string.h                                [26-mar.-15 11:34  CRC=C4814297]
+    E:\PICC\Drivers\stddef.h                                [05-sep.-14 10:47  CRC=897CEC6C]
+    E:\PICC\Drivers\ctype.h                                 [03-ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=1C245D0D
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=0018
+
+Units:
+    proyecto3 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   proyecto3.xsym
+    Errors:      proyecto3.err
+    Ext Symbols: proyecto3.esym
+    INHX8:       proyecto3.hex
+    Symbols:     proyecto3.sym
+    List:        proyecto3.lst
+    Debug/COFF:  proyecto3.cof
+    Project:     proyecto3.ccspjt
+    Call Tree:   proyecto3.tre
+    Statistics:  proyecto3.STA

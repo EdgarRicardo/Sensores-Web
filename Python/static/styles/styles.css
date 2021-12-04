@@ -1,0 +1,9 @@
+svg > g[class^="raphael-group-"] > g > path{
+    display: none !important;
+}
+svg > g[class^="raphael-group-"] > g > rect{
+    display: none !important;
+}
+.container{
+    text-align: center;
+}
