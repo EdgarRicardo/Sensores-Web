@@ -8,4 +8,5 @@ y Flask para el servicio web que nos permite obtener los datos de los sensores:
 Para ejecutar el proyecto solo ejecutar el archivo Python de la raíz
   - python Sensores.py
   
- Esto activara el servidor web de Flask y podras porbar el proyecto
+Esto activara el servidor web de Flask y podras probar el proyecto.
+La info de los sensores se lee a través de puertos seriales COM3(Python) y COM4(Sensores)
