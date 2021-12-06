@@ -97,6 +97,7 @@ $( document ).ready(function() {
             renderAt: 'chart-distancia',
             width: '600',
             height: '700',
+            timeSpread: 10,
             dataSource: {
                 chart: {
                     //theme: "fusion",
@@ -178,46 +179,46 @@ $( document ).ready(function() {
             height: '170',
             dataFormat: 'json',
             dataSource: {
-                "chart": {
-                "theme": "fusion",
-                "caption": "Luxes captados por el LDR",
-                "lowerLimit": "0",
-                "upperLimit": "100",
-                "numberSuffix": " luxes",
-                "chartBottomMargin": "40",
-                "valueFontSize": "11",
-                "valueFontBold": "0",
-                "showValue": "0",
-                "gaugeFillMix": "{light-10},{light-70},{dark-10}",
-                "gaugeFillRatio": "40,20,40"
+                chart: {
+                    theme: "fusion",
+                    caption: "Luxes captados por el LDR",
+                    lowerLimit: "0",
+                    upperLimit: "100",
+                    numberSuffix: " luxes",
+                    chartBottomMargin: "40",
+                    valueFontSize: "11",
+                    valueFontBold: "0",
+                    showValue: 0,
+                    gaugeFillMix: "{light-10},{light-70},{dark-10}",
+                    gaugeFillRatio: "40,20,40"
                 },
-                "colorRange": {
-                "color": [
+                colorRange: {
+                color: [
                     {
-                        "minValue": "0",
-                        "maxValue": "20",
-                        "code": "#fffdcc"
+                        minValue: 0,
+                        maxValue: 20,
+                        code: "#fffdcc"
                     },
                     {
-                        "minValue": "20",
-                        "maxValue": "40",
-                        "code": " #fffca0"
+                        minValue: 20,
+                        maxValue: 40,
+                        code: "#fffca0"
                     },
                     {
-                        "minValue": "40",
-                        "maxValue": "60",
-                        "code": " #fffa6d"
+                        minValue: 40,
+                        maxValue: 60,
+                        code: "#fffa6d"
 
                     }, 
                     {
-                        "minValue": "60",
-                        "maxValue": "80",
-                        "code": " #fff833"
+                        minValue: 60,
+                        maxValue: 80,
+                        code: "#fff833"
                     }, 
                     {
-                        "minValue": "80",
-                        "maxValue": "100",
-                        "code": " #fdf400"
+                        minValue: 80,
+                        maxValue: 100,
+                        code: " #fdf400"
                     }, 
                     
                 ]},
@@ -250,7 +251,7 @@ $( document ).ready(function() {
                         evtObj.sender.feedData && evtObj.sender.feedData("&value=" + dataSensores.luz);
                     }, 50);
                 },
-            realTimeUpdateComplete: function(evt, arg) {
+                realTimeUpdateComplete: function(evt, arg) {
                     var annotations = evt.sender.annotations,
                     dataVal = evt.sender.getData(1);
                     if(dataVal>10)
@@ -289,9 +290,9 @@ $( document ).ready(function() {
         clearInterval(sDistancia.chartInterval);
         sDistancia.chartInterval = setInterval(function() {
             dataVal = sDistancia.getData()
-            vaciado = dataVal-10>3 ? dataVal - 10 : 3
+            vaciado = dataVal-10>3 ? dataVal - 1 : 3
             sDistancia.feedData("&value=" + vaciado);
-        }, 50);
+        }, 1);
     });
     $("#dReal" ).click(function() {
         colorsButtonsReset()
