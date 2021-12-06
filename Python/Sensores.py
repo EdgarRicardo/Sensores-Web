@@ -39,6 +39,6 @@ def dataPort():
 if __name__ == '__main__':
     t = threading.Thread(target=getData)
     t.start()
-    app.run(debug=True, port=4000,use_reloader=False)
+    app.run(debug=False, port=80,use_reloader=False,host="0.0.0.0")
     sys.exit()
     

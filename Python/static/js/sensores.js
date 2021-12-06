@@ -290,7 +290,7 @@ $( document ).ready(function() {
         clearInterval(sDistancia.chartInterval);
         sDistancia.chartInterval = setInterval(function() {
             dataVal = sDistancia.getData()
-            vaciado = dataVal-10>3 ? dataVal - 1 : 3
+            vaciado = dataVal-10>3 ? dataVal - 10 : 3
             sDistancia.feedData("&value=" + vaciado);
         }, 1);
     });
