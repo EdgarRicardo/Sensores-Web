@@ -7,3 +7,15 @@ svg > g[class^="raphael-group-"] > g > rect{
 .container{
     text-align: center;
 }
+.header{
+    box-shadow: 10px 3px 1px darkgrey;
+}
+.btn-mine{
+    border: 1px solid #474747 !important;
+    font-weight: 500 !important;
+}
+p{
+    display: block;
+    font-weight: 400;
+    font-size: x-large;
+}
